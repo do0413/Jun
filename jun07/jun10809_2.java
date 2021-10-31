@@ -12,7 +12,7 @@ public class jun10809_2 {
 		
 		int[] arr = new int[26]; //소문자 배열
 		for (int i =0; i<arr.length; i++) {
-			arr[i]=-1;
+			arr[i]=-1; 
 		}
 		
 		for(int i=0; i<S.length(); i++) {
