@@ -9,29 +9,37 @@ public class jun1157_2 {
 		
 		String S= sc.next();
 		int[] check = new int[26]; //대문자
+		
 		for(int i=0; i<S.length(); i++) {
-			char ch = S.charAt(i);
-			if('A'<= ch && ch<='Z') {
-				check[ch-'A']++;
-			}else {
-				check[ch-'a']++;
+			int ch = S.charAt(i);
+			//System.out.println("ch: " + ch);
+			if('a'<=ch && ch<='z') {//소문자
+				System.out.println("dd");
+				int n = ch-'a'; //인덱스를 얻는다.
+				check[n]++;//
+			}else {//대문자
+				System.out.println("DD");
+				int n = ch-'A';
+				check[n]++;
 			}
 		}
 		
 		int max=-1;
+		//int num=-1;
 		char ch='?';
 		for(int i=0; i<check.length; i++) {
-			if(max < check[i]) {
-				max = check[i];
-				ch = (char)(i);
-				System.out.println("--:"+ch);
-			}else if (max==check[i+1]) {
-				ch ='?';
+			if(max<check[i]) {
+				max=check[i];
+				ch = (char)(i+'A');
+			}else if(max==check[i]) {
+				ch='?';
 			}
 		}
+
 		
 		System.out.println(ch);
+		
+		
+	}//main
 
-	}
-
-}
+}//class
