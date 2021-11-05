@@ -2,6 +2,7 @@ package ex;
 
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.Stack;
 
 public class ex3048 {
 
@@ -48,6 +49,17 @@ public class ex3048 {
 		for(int i=0; i<str.length; i++) {
 			chrr+=(char)str[i];
 			System.out.println("chrr: "+chrr);
+		}
+		
+		//chrr에담긴 char배열을 이용한다. 거기 다 담겨있으니까.
+		String[] AA= new String[A.length()];
+		String[] BB= new String[B.length()];
+		for(int i=AA.length-1;  i>=0; i--) {
+			String temp= AA[i];
+			AA[i]=BB[i];
+			BB[B.length()-i] = temp;
+			//System.out.println("AA["+i+"]: "+AA[i]);
+			//System.out.println("BB["+(B.length()-i)+"]: "+BB[B.length()-i]);
 		}
 		
 
