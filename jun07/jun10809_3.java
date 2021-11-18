@@ -1,5 +1,6 @@
 package jun07;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class jun10809_3 {
@@ -25,6 +26,8 @@ public class jun10809_3 {
 		for(int val : index) {
 			System.out.print(val+ " ");
 		}
+		//다른출력법
+		//System.out.println("최종 ㄴA배열 출력: "+ Arrays.toString(index));
 		
 	}
 
